@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. med. Martin Born</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <h1>Willkommen auf der Webseite<br>von Dr. med. Martin Born</h1>
+        <p>Ab dem 01. Oktober 2024 finden Sie mich in meinen neuen Praxisräumen<br>"Gutenberger Hausärzte" in Petersberg OT Gutenberg.</p>
+        <a href="https://www.gutenberger-hausaerzte.de" class="button-main">Zur Webseite Gutenberger Hausärzte</a>
+    </div>
+    <div class="footer">
+        <a href="impressum.html" class="button-footer">Impressum</a>
+        <a href="datenschutz.html" class="button-footer">Datenschutz</a>
+    </div>
+
+    <!-- Cookie-Hinweis -->
+    <div id="cookie-notice" class="cookie-notice">
+        <p>Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Durch die Nutzung dieser Website stimmen Sie der Verwendung von Cookies zu. <a href="datenschutz.html">Erfahren Sie mehr</a>.</p>
+        <button id="accept-cookies">Akzeptieren</button>
+    </div>
+
+    <script>
+        document.getElementById('accept-cookies').onclick = function() {
+            document.getElementById('cookie-notice').style.display = 'none';
+            // Hier könntest du auch ein Cookie setzen, um die Zustimmung zu speichern
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,291 @@
+/* Allgemeine Stile */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Hintergrundbild nur für die Startseite */
+body:not(.content-body) {
+    background-image: url('hintergrund.jpg');
+    background-attachment: fixed;
+}
+
+/* Overlay für Startseite */
+.overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6); /* Transparentes Rechteck */
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 80%;
+    max-width: 800px;
+}
+
+.overlay h1 {
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 0.6); /* Grauton */
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.6); /* Grauton */
+    margin: 10px 0;
+    line-height: 1.5em;
+}
+
+.button-main {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #b48157;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button-main:hover {
+    background-color: #8c6344;
+}
+
+/* Footer-Buttons (Impressum, Datenschutz) */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.button-footer {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #b48157;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.button-footer:hover {
+    background-color: #8c6344;
+}
+
+/* Cookie-Hinweis */
+.cookie-notice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.cookie-notice p {
+    margin: 0;
+    color: #333;
+}
+
+.cookie-notice a {
+    color: #b48157;
+    text-decoration: underline;
+}
+
+.cookie-notice button {
+    margin-left: 10px;
+    background-color: #b48157; /* Angepasste Farbe */
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.cookie-notice button:hover {
+    background-color: #997344; /* Dunkler bei Hover */
+}
+
+/* Impressum und Datenschutz Seiten */
+.content-body {
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-body .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Leicht transparent */
+    border-radius: 8px;
+}
+
+.content-body h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-body h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.content-body p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6em;
+}
+
+/* Zurück zur Startseite Button in Impressum und Datenschutz */
+.back-to-home {
+    text-align: center; /* Zentriert den Button */
+    margin-top: 20px;
+}
+
+.back-to-home .button-main {
+    background-color: #b48157;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home .button-main:hover {
+    background-color: #997344;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .overlay {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .overlay h1 {
+        font-size: 2em;
+    }
+
+    .overlay h2 {
+        font-size: 1.5em;
+    }
+
+    .overlay p {
+        font-size: 1em;
+    }
+
+    .button-main {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .button-footer {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .content-body .container {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .content-body h1 {
+        font-size: 1.8em;
+    }
+
+    .content-body h2 {
+        font-size: 1.5em;
+    }
+
+    .content-body p {
+        font-size: 1em;
+    }
+
+    .content-body .button-main {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .overlay {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .overlay h1 {
+        font-size: 1.8em;
+    }
+
+    .overlay h2 {
+        font-size: 1.3em;
+    }
+
+    .overlay p {
+        font-size: 0.9em;
+    }
+
+    .button-main {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .button-footer {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .content-body .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .content-body h1 {
+        font-size: 1.6em;
+    }
+
+    .content-body h2 {
+        font-size: 1.3em;
+    }
+
+    .content-body p {
+        font-size: 0.9em;
+    }
+
+    .content-body .button-main {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+
+
+      
+
+
+
+
+
